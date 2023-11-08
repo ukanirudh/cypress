@@ -3,8 +3,8 @@
 describe('Handling Child Windows', () => {
 
     it('Should handle child window', () => {
-
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        const baseUrl = Cypress.env('url');
+        cy.visit(`${baseUrl}/AutomationPractice/`);
 
         cy.get("#opentab").invoke('removeAttr', 'target').click();
 

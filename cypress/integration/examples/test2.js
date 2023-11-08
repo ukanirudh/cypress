@@ -3,7 +3,8 @@
 
 describe('My first test suite', () => {
     it.skip('first test case', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        const baseUrl = Cypress.env('url');
+        cy.visit(`${baseUrl}/AutomationPractice/`);
         // cy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1')
 
         cy.get('input[type="checkbox"]').check(['option2', 'option3'])
@@ -14,7 +15,8 @@ describe('My first test suite', () => {
     })
 
     it('verify table', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        const baseUrl = Cypress.env('url');
+        cy.visit(`${baseUrl}/AutomationPractice/`);
         cy
             .get('.table-display tbody')
             .contains('Advanced Selenium Framework Pageobject, TestNG, Maven, Jenkins,C')

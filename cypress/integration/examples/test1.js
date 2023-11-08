@@ -2,7 +2,8 @@
 
 describe('My first test suite', () => {
     it('first test case', () => {
-        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
+        const baseUrl = Cypress.env('url');
+        cy.visit(`${baseUrl}/seleniumPractise/#/`);
         cy.get('.search-keyword').type('ca');
         cy.wait(2000);
         cy.get('.products .product').should('have.length', 4);

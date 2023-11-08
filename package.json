@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "run:test": "cypress run",
     "headed:test": "cypress run --headed",
+    "chrome:test": "cypress run --browser chrome",
     "open:test": "cypress open"
   },
   "keywords": [],
