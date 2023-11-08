@@ -8,6 +8,7 @@
     "run:test": "cypress run",
     "headed:test": "cypress run --headed",
     "chrome:test": "cypress run --browser chrome",
+    "chrome:headless": "cypress run --browser chrome --headless",
     "open:test": "cypress open"
   },
   "keywords": [],
